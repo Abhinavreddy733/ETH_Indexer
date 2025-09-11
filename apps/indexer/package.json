@@ -1,0 +1,23 @@
+{
+  "name": "indexer",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "consumer": "bun run consumer.ts",
+    "deposit": "bun run deposit.ts",
+    "dev": "concurrently \"bun run deposit.ts\" \"bun run consumer.ts\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "db": "*",
+    "ethers": "^6.15.0"
+  }
+}
